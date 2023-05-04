@@ -7,5 +7,5 @@ app.use(cors())
 app.get("/hello", (req, res) => {
     res.send("Hello from server")
 })
-app.listen(PORT, () => { console.log("Server Started") })
+app.listen(PORT, () => { console.log("Server Started" , PORT) })
 exports.expressApi = functions.https.onRequest(app)
