@@ -5,7 +5,7 @@ const app = express()
 const PORT = process.env.PORT | 3001
 app.use(cors())
 app.get("/hello", (req, res) => {
-    res.send("Hello from server")
+    return res.send("Hello from server")
 })
 app.listen(PORT, () => { console.log("Server Started" , PORT) })
 exports.expressApi = functions.https.onRequest(app)
